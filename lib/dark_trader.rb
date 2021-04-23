@@ -5,7 +5,6 @@ require 'open-uri'
 def crypto_scrapper
 
   page = Nokogiri::HTML(URI.open("https://coinmarketcap.com/all/views/all/"))
-# puts page.class
 
   crypto_name_array = []
   all_crypto_names = page.xpath('//*[@id="__next"]/div[1]/div[2]/div/div[1]/div/div[2]/div[3]/div/table/tbody/tr/td[2]')
